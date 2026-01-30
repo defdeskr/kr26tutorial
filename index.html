@@ -1,1 +1,211 @@
-TEST
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definite Descriptions in KR Languages - Tutorial at KR-2026</title>
+    <style>
+        /* Using Roboto font family similar to ExtenDD page */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+
+        h1 {
+            font-weight: 500;
+            font-size: 2em;
+            margin-bottom: 0.3em;
+            color: #222;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 1.5em;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            color: #222;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.3em;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 1.2em;
+            margin-top: 1.2em;
+            margin-bottom: 0.4em;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 1em;
+            text-align: justify;
+        }
+
+        ul {
+            margin-bottom: 1em;
+            padding-left: 2em;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        strong {
+            font-weight: 500;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .presenter {
+            margin-bottom: 2em;
+        }
+
+        .presenter h3 {
+            margin-bottom: 0.3em;
+        }
+
+        .presenter p {
+            margin-bottom: 0.5em;
+        }
+
+        .email {
+            font-style: italic;
+            color: #666;
+        }
+
+        footer {
+            margin-top: 3em;
+            padding-top: 1em;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .note {
+            background-color: #f5f5f5;
+            padding: 1em;
+            border-left: 4px solid #0066cc;
+            margin: 1.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Definite Descriptions in KR Languages</h1>
+    <p><em>Half-day Tutorial at KR-2026</em></p>
+
+    <h2>Overview</h2>
+    <p>Definite descriptions are expressions having the logical form of "the x such that φ". In classical first-order logic, since singular terms are assumed to be always denoting, definite descriptions are typically paraphrased by sentences expressing existence and uniqueness conditions—a proposal that dates back to Russell. To treat definite descriptions as genuine terms of the language, other approaches rely instead on free logics, which depart from standard FOL by allowing for singular terms that may not designate.</p>
+
+    <p>Recently, definite descriptions have been studied also in the context of Knowledge Representation formalisms. In description logics, terms of the form ιC ("the object that is C") have been added to standard languages, leading to extensions like ALCOι<sub>u</sub> and ELOι<sub>u</sub>, for which the complexity of reasoning matches that of their standard counterparts. Similarly, expressive power and complexity have been investigated for propositional modal logics enriched with formulas of the form @<sub>φ</sub>ψ, which hold whenever there exists a unique state satisfying φ that makes ψ true.</p>
+
+    <p>The purpose of this tutorial is to give a comprehensive overview of the recent developments in the field, introducing a unifying framework and discussing the main results on definite descriptions that are relevant to KR applications. In addition, we intend to mention and compare alternative approaches that focus on the ε-calculus by Hilbert-Bernays, on the referring expression generation problem, and on the use of referring expressions for query answering in information systems.</p>
+
+    <h2>Target Audience and Prerequisites</h2>
+
+    <h3>Target Audience</h3>
+    <p>This tutorial is aimed at researchers, students, and practitioners in KR, with an interest in logic, semantics of formal and natural languages, ontology engineering, and commonsense reasoning.</p>
+
+    <h3>Prerequisite Knowledge</h3>
+    <p>Basic familiarity with FOL, modal logics, and DLs is expected. We will in any case briefly recap most of the necessary background notions.</p>
+
+    <h3>Learning Goals</h3>
+    <p>At the end of this tutorial, participants will:</p>
+    <ul>
+        <li>Understand the history and the philosophical motivations behind the development of free logic and the theory of definite descriptions</li>
+        <li>Have an overview of the main syntactic and semantic choices in first-order languages regarding terms that do not denote, both in the classical and in the modal case</li>
+        <li>Have a comprehensive picture on the use of definite descriptions in KR formalisms, in particular regarding their impact on semantics, proof-theory, expressive power and decidability</li>
+    </ul>
+
+    <h2>Outline</h2>
+
+    <h3>Part 1: Introduction and Motivation (30 minutes)</h3>
+    <ul>
+        <li><strong>Introduction:</strong> What are definite descriptions? Motivating examples and philosophical puzzles</li>
+        <li><strong>Philosophical Approaches:</strong> Russell, Frege/Strawson, Hintikka/Lambert and motivations for free logics; reference to Hilbert-Bernays ε-calculus</li>
+        <li><strong>Referring Expressions in Information Systems</strong> (10 min): Query answering with referring expressions; referring expression generation problem</li>
+    </ul>
+
+    <h3>Part 2: First-Order Logic, Free Logics, and Description Logics (45 minutes)</h3>
+    <ul>
+        <li><strong>First-Order and Free Logics</strong> (15 min): Standard FOL; free logics with positive, negative, and neutral semantics</li>
+        <li><strong>Theories of Definite Descriptions</strong> (15 min): Russell's paraphrase; axioms and proof-theory of free logic systems with definite descriptions</li>
+        <li><strong>Description Logics</strong> (15 min): Definite descriptions and nominals with empty interpretation in DL languages</li>
+    </ul>
+
+    <h3>Part 3: Modal, Temporal, and Hybrid Logics – Propositional and First-Order (45 minutes)</h3>
+    <ul>
+        <li><strong>Propositional Modal and Hybrid Logics:</strong> Expressive power of definite descriptions in propositional modal and hybrid logics</li>
+        <li><strong>Temporal Reference with Definite Descriptions:</strong> Definite descriptions referring to time points in monadic FOL of orders and in hybrid tense FOL</li>
+        <li><strong>First-Order Modal and Temporal Logics:</strong> Definite descriptions and their impact on decidability of monodic fragments in modal FOL</li>
+    </ul>
+
+    <h3>Part 4: Conclusion and Discussion (30 minutes)</h3>
+    <ul>
+        <li>Summary</li>
+        <li>Future Work</li>
+        <li>Questions</li>
+    </ul>
+
+    <h2>Presenters</h2>
+
+    <div class="presenter">
+        <h3>Alessandro Artale</h3>
+        <p class="email">artale@inf.unibz.it</p>
+        <p>Prof. Alessandro Artale is an Associate Professor in the Faculty of Engineering at the Free University of Bozen-Bolzano. His research interests include modal and temporal logics, description logics, logics for knowledge representation, extensions of the ontology-based data access (OBDA) paradigm with a temporal dimension and reasoning over conceptual data models including their dynamic behaviour. He recently got interested in extending modal and description logics with definite descriptions. He got a PhD in Computer Science from the University of Florence, Italy, in 1994. He published more than 100 papers in international journals and conferences. He has an h-index of 31 with more than 4400 citations. He acted as both Chair and PC/SPC member of the most prestigious International Conferences in AI, and as editor of both proceedings and journal's special issues. He is currently associate editor of the International Journal of Artificial Intelligence Research (JAIR).</p>
+    </div>
+
+    <div class="presenter">
+        <h3>Andrzej Indrzejczak</h3>
+        <p class="email">andrzej.indrzejczak@uni.lodz.pl</p>
+        <p>Andrzej Indrzejczak received his Ph.D. in 1997 and his habilitation in 2007 from the University of Łódź (Poland). Since 2015 he has been a full professor and the chair of the Department of Logic at the University of Łódź. Moreover, he is the editor-in-chief of the <em>Bulletin of the Section of Logic</em>, and the chairman of the editorial board of <em>Studia Logica</em>. His research is focused mainly on proof theory of non-classical logics. He has published 8 books, including <em>Natural Deduction, Hybrid Systems and Modal Logics</em> (Springer 2010) and <em>Sequents and Trees</em> (Birkhäuser 2021), and over 100 papers. Since 2008 he has organised twelve editions of the conference <em>Non-Classical Logics: Theory and Applications</em>. Currently he is the PI in the ERC advanced project ExtenDD devoted to proof theory of definite descriptions and other complex terms and term-forming operators.</p>
+    </div>
+
+    <div class="presenter">
+        <h3>Oliver Kutz</h3>
+        <p class="email">oliver.kutz@unibz.it</p>
+        <p>Prof. Oliver Kutz is an Associate Professor in the Faculty of Engineering at the Free University of Bozen-Bolzano. He received his Ph.D. from the University of Liverpool in 2004 (UK CPHC/BCS award 2005). He is a leading researcher in the logical foundations of ontology engineering, having co-designed the logic SROIQ underlying the Web Ontology Language OWL 2, the E-connections technique designed for heterogeneous multi-dimensional knowledge representation, and was co-project leader of the OntoIOp.org standardisation activity of OMG that designed the Distributed Ontology Language DOL (adopted by OMG in 2018). He was Program Chair of FOIS 2014, General Chair of ISAO 2016, Local Chair of JOWO 2017, General Chair of FOIS 2018, and General Chair of EKAW 2020. He is on the Editorial Board of the Journal Applied Ontology, Associate Editor of CEUR (IAOA Series), and editor of the German Journal of Artificial Intelligence KI. He is further an elected member of the Executive Council of the International Association for Ontology and its Applications (IAOA), for which he serves as President since 2023. He was PI at FUB in the FET Open Project COINVENT 'Concept Invention Theory', and is currently PI of the project 'Abstractron: Conceptual Abstraction in Humans and Robots'.</p>
+    </div>
+
+    <div class="presenter">
+        <h3>Andrea Mazzullo</h3>
+        <p class="email">andrea.mazzullo@unibz.it</p>
+        <p>Andrea Mazzullo is an Assistant Professor at the KRDB Research Centre, Faculty of Engineering, Free University of Bozen-Bolzano, since 2022. From 2017 to 2022, he was affiliated with the same group as a PhD student in Computer Science, under the supervision of Prof. Alessandro Artale and Prof. Ana Ozaki. His main research areas are in temporal, modal, and description logics, with a focus on referring expressions in knowledge representation languages. He received his Bachelor's degree in 2014 and his Master's degree in 2017, both in Philosophy, from the University of Bologna, under the supervision of Prof. Giovanna Corsi. In 2017, he was an Erasmus+ intern at the University of Manchester, working with Prof. Uli Sattler. During his PhD, in 2019, he was a visiting student at the University of Liverpool, under the supervision of Prof. Frank Wolter. He has published at several international AI conferences, such as AAAI, IJCAI, and KR.</p>
+    </div>
+
+    <div class="presenter">
+        <h3>Przemysław Wałęga</h3>
+        <p class="email">p.walega@qmul.ac.uk</p>
+        <p>Przemysław Wałęga is an Associate Professor (Senior Lecturer) in Queen Mary University of London and a member of an ERC grant at University of Łódź. He was a Senior Researcher in University of Oxford, Department of Computer Science and received PhD in Logics in the Institute of Philosophy at the University of Warsaw. His research is devoted to designing formal logical languages, studying their computational properties, and developing efficient reasoning algorithms for them. He is especially interested in temporal, modal, and description logics.</p>
+    </div>
+
+    <h2>Resources</h2>
+
+    <div class="note">
+        <p><strong>Tutorial Materials</strong></p>
+        <p>Tutorial slides and additional materials will be made available here closer to the conference date.</p>
+        <ul>
+            <li>Slides (to be added)</li>
+            <li>Additional resources (to be added)</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Part of <a href="https://kr.org/KR2026/">KR2026</a></p>
+    </footer>
+</body>
+</html>
