@@ -115,7 +115,8 @@
     <h2>Overview</h2>
     <p>Definite descriptions are expressions having the logical form of "the x such that \(\varphi\)". In classical first-order logic, since singular terms are assumed to be always denoting, definite descriptions are typically paraphrased by sentences expressing existence and uniqueness conditions (a proposal that dates back to Russell). To treat definite descriptions as genuine terms of the language, other approaches rely instead on free logics, which depart from standard FOL by allowing for singular terms that may not designate. Over the years, several theories of definite descriptions have been investigated, from a semantical and a proof-theoretical perspective, in both standard and modal FOL.</p>
 
-    <p>Recently, definite descriptions have been studied also in the context of Knowledge Representation formalisms. In description logics, terms of the form \(\iota C\) ("the object that is \(C\)") have been added to standard languages, leading to extensions like \(\mathcal{ALC}\iota\), \(\mathcal{ALCO}^{\iota}_{u}\) and \(\mathcal{ELO}^{\iota}_{u}\), for which the complexity of reasoning matches that of their standard counterparts. Similarly, expressive power and complexity have been investigated for propositional modal logics enriched with formulas of the form \(@_{\varphi} \psi\), which hold whenever there exists a unique state satisfying \(\varphi\) that makes \(\psi\) true. As a mean to construct complex temporal references, definite descriptions have been also introduced as terms in first-order monadic logic of orders, as well as in first-order hybrid tense logic. Finally, names and definite descriptions that can act as non-rigid designators, referring to different objects across worlds or over time, have been studied also for their impact on the decidability boundaries of well-known monodic fragments of first-order modal and temporal logics.</p>
+    <p>Recently, definite descriptions have been studied also in the context of Knowledge Representation formalisms. In description logics, the introduction of terms of the form \(\iota C\) ("the object that is \(C\)") to standard languages has lead to extensions like \(\mathcal{ALC}\iota\), \(\mathcal{ALCO}^{\iota}_{u}\) and \(\mathcal{ELO}^{\iota}_{u}\), which have been studied in their expressive power and complexity of reasoning. Definite descriptions that act as non-rigid desgnators, meaning that they can refer to different objects across worlds or over time, have been also introduced in first-order modal and temporal logics, to investigate their impact on the decidability boundaries of well-known fragments.</p>
+    <!--<p>Recently, definite descriptions have been studied also in the context of Knowledge Representation formalisms. In description logics, terms of the form \(\iota C\) ("the object that is \(C\)") have been added to standard languages, leading to extensions like \(\mathcal{ALC}\iota\), \(\mathcal{ALCO}^{\iota}_{u}\) and \(\mathcal{ELO}^{\iota}_{u}\), for which the complexity of reasoning matches that of their standard counterparts. Similarly, expressive power and complexity have been investigated for propositional modal logics enriched with formulas of the form \(@_{\varphi} \psi\), which hold whenever there exists a unique state satisfying \(\varphi\) that makes \(\psi\) true. As a mean to construct complex temporal references, definite descriptions have been also introduced as terms in first-order monadic logic of orders, as well as in first-order hybrid tense logic. Finally, names and definite descriptions that can act as non-rigid designators, referring to different objects across worlds or over time, have been studied also for their impact on the decidability boundaries of well-known monodic fragments of first-order modal and temporal logics.</p>-->
 
     <p>The purpose of this tutorial is to give a comprehensive overview of the recent developments in the field, introducing a unifying framework and discussing the main results on definite descriptions that are relevant to KR applications. In addition, we intend to mention and compare alternative approaches,
     <!--that focus on the \(\epsilon\)-calculus by Hilbert-Bernays,-->
@@ -139,7 +140,10 @@
 
     <h2>Outline</h2>
 
-    <h4>Part 1: Introduction and Motivation</h4><!--(30 minutes)-->
+    <h4>Part 1: Introduction: Definite Descriptions and Free Semantics</h4>
+    <!-- <h4>Part 1: Introduction: Definite Descriptions and Free Semantics in First-Order Logic (and Fragments</h4>
+    -->
+    <!--(30 minutes)-->
     <!--
     <ul>
         <li><strong>Introduction:</strong> What are definite descriptions? Motivating examples and philosophical puzzles</li>
@@ -147,7 +151,7 @@
         <li><strong>Referring Expressions in Information Systems</strong> (10 min): Query answering with referring expressions; referring expression generation problem</li>
     </ul>
     -->
-    <h4>Part 2: Definite Descriptions in First-Order Logic, Free Logics, and Description Logics</h4><!--(45 minutes)-->
+    <h4>Part 2: Definite Descriptions in Description Logics</h4><!--(45 minutes)-->
     <!--
     <ul>
         <li><strong>First-Order and Free Logics</strong> (15 min): Standard FOL; free logics with positive, negative, and neutral semantics</li>
@@ -155,7 +159,8 @@
         <li><strong>Description Logics</strong> (15 min): Definite descriptions and nominals with empty interpretation in DL languages</li>
     </ul>
   -->
-    <h4>Part 3: Definite Descriptions in Modal, Temporal, and Hybrid Logics – Propositional and First-Order</h4><!--(45 minutes)-->
+    <h4>Part 3: Definite Descriptions in First-Order Modal and Temporal Logics</h4>
+    <!--<h4>Part 3: Definite Descriptions in Modal, Temporal, and Hybrid Logics – Propositional and First-Order</h4>--><!--(45 minutes)-->
     <!--
     <ul>
         <li><strong>Propositional Modal and Hybrid Logics:</strong> Expressive power of definite descriptions in propositional modal and hybrid logics</li>
